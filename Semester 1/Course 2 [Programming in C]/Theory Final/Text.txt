@@ -1,0 +1,190 @@
+For memory optimization we declare large data type first in structure.
+
+I want to count how much page remaining in my offset paper bundle. So, i divide the remaining paper two part. 1 part i take and another part i gave my friend. My part i count how much paper i have and another part my firend count how much paper he has in his part. and finally i add my coutn number with my friend count number. Then i get the total number of page i have in my offset paper bundle. 
+
+Imagine you have a whole box full of $100 bills and you need to count how much money you have. Since it’s a lot, you might ask for the help of your friend, and you divide the stack in two. When you both finish counting, you add up your results and get the final number.
+
+An executable file is a type of computer file that runs a program when it is opened. This means it executes code or a series of instructions contained in the file.
+
+An object file is a computer file containing object code, that is, machine code output of an assembler or compiler. The object code is usually relocatable, and not usually directly executable.s
+
+Source code is a group of instructions a programmer writes using computer programming languages.
+
+Source code is generally understood to mean programming statements that are created by a programmer 
+with a text editor or a visual programming tool and then saved in a file. Object code generally 
+refers to the output, a compiled file, which is produced when the Source Code is compiled with 
+a C compiler. The object code file contains a sequence of machine-readable instructions that is 
+processed by the CPU in a computer. 
+Operating system or application software is usually in the form of compiled object code.
+
+C is one of the most widely used programming languages of all time, and C compilers are available for the majority of available computer architectures and operating systems. The C language has formed the basis for many languages including C++, Java, JavaScript, Go, Rust, Limbo, LPC, C#, PHP, Python, Perl, Verilog, and C-shell. 
+That's why C called mother of all language.
+
+There are 5 types of error in C:
+Syntax error
+Run-time error
+Linker error
+Logical error
+Semantic error
+
+We can access the member roll and age of Student structure variable s as:
+s.roll and s.age
+
+There are two ways to access structure members
+(.) or Dot Operator
+Arrow Operator(->)
+
+Structure pointer operator or Arrow operator is used to access members of structure using 
+pointer variable. When we have pointer to a structure variable, then we can access member variable 
+by using pointer variable followed by an arrow operator and then the name of the member variable.
+
+
+A structure is used to represent information about something more complicated than a single number, 
+character, or boolean can do. 
+For example, a Student can be defined by his or her name, gpa, age, uid, etc. 
+
+Structures are a way to group several related variables into one place. 
+Each variable in the structure is known as a member of the structure.
+
+1. The program will be easier to understand, maintain and debug.
+2. Reusable codes that can be used in other programs.
+3. A large program can be divided into smaller modules. Hence, a large project can be divided among many programmers.
+
+There are four types of User-defined functions in C.
+Those are:
+1. Function with no arguments and no return value.
+2. Function with no arguments and a return value.
+3. Function with arguments and no return value.
+4. Function with arguments and with return value.
+
+1. Function with no arguments and no return value:
+Functions that have no arguments and no return values.
+In the above program, function sum does not take any arguments and has no return values.
+It takes x and y as inputs from the user and prints them inside the void function.
+
+2. Function with no arguments and a return value:
+Functions that have no arguments but have some return values.
+In the above program, function sum does not take any arguments and has a return value as an integer type. 
+It takes x and y as inputs from the user and returns there sum.
+
+3. Function with arguments and no return value
+Functions that have arguments but no return values.
+In the above program, function sum does take x and y as arguments and has no return value.
+The main function takes x and y as inputs from the user and calls the sum function to perform 
+the print operation on the given arguments.
+
+4. Function with arguments and with return value:
+Functions that have arguments and some return value.
+In the above program, function sum takes two arguments
+as x and y, and has a return value as an integer type. 
+The main function takes input x and y from the user and 
+calls the sum function to perform a specific operation on 
+the given arguments and returns the value.
+
+Types of User-defined Functions in C 
+
+
+A function is a block of code which only runs when it is called. 
+You can pass data, known as parameters, into a function. 
+Functions are used to perform certain actions, and they are important for reusing code:
+
+
+malloc() function creates a single block of memory of a specific size.	
+calloc() function assigns multiple blocks of memory to a single variable.
+
+The number of arguments in malloc() is 1.	
+The number of arguments in calloc() is 2.
+
+malloc() is faster.
+calloc() is slower.
+
+malloc() has high time efficiency.
+calloc() has low time efficiency.
+
+
+The memory block allocated by malloc() has a garbage value.
+The memory block allocated by calloc() is initialized by zero.
+
+malloc() indicates memory allocation.
+calloc() indicates contiguous allocation.
+
+
+
+Call by Value
+In call by value, the actual value that is passed as argument is not changed after performing some operation on it. 
+When call by value is used, it creates a copy of that variable into the stack section in memory. 
+When the value is changed, it changes the value of that copy, the actual value remains the same.
+
+Call by Reference
+In call by reference the actual value that is passed as argument is changed after performing some operation on it. 
+When call by reference is used, it creates a copy of the reference of that variable into the stack section in memory. 
+Is uses a reference to get the value. So when the value is changed using the reference it changes the value of the actual variable.
+
+
+
+
+
+
+In call by value it creates a copy of that variable into the stack section in memory. 
+When the value is changed, it changes the value of that copy, the actual value remains the same.
+
+But in call by reference, it creates a copy of the reference of that variable into the stack section in memory. 
+If we changed the value using the reference it changes the value of the actual variable.
+
+
+
+
+
+
+
+
+The ternary operator is an operator which takes three operands rather than the typical one or two that most operators use.
+A ternary operator is an operator that takes three arguments as input and returns one output.
+variable_name = (condition) ? value_if_true : value_if false;
+
+It is declared inside a function.
+It is declared outside the function.
+
+If it is not initialized, a garbage value is stored	
+If it is not initialized zero is stored as default.
+
+It is stored on the stack unless specified.	
+It is stored on a fixed location decided by the compiler.
+
+Local variables are stored in a stack in memory.
+Global variables are stored in the data segment of memory.	
+
+We can declare various variables with the same name but in other functions.
+We cannot declare many variables with the same name.
+
+1. First take a input how many fibonacci number should user want. Then store it n variables.
+2. Then declare three variables a, b and x and store a = 0, b = 1.
+3. Then check n value. If n=1 then print a, or if n=2 then print 2 value a and b, or if n value is greater than 2 then go to next step.
+4. First print a and b values. Then make a for loop which work 1 to (n-2) times. Then add a with b and store the sum in variable x. Then print x value. Then, Last store b value in a and x value in b variable for next iteration.
+
+The Pointer in C, is a variable that stores address of another variable. A pointer can also be used to refer to another pointer function.
+
+When a method is called, the method arguments reference the same variable in memory as the caller.
+Pass-by-value: When a method is called, the caller passes a copy of the argument variables to the method resulting in two values in memory.
+
+
+In call by value, 
+the actual value that is passed as argument is not changed after performing some operation on it. 
+When call by value is used, 
+it creates a copy of that variable into the stack section in memory. 
+When the value is changed, 
+it changes the value of that copy, the actual value remains the same.
+
+
+In call by reference 
+the actual value that is passed as argument is changed after performing some operation on it. 
+When call by reference is used, 
+it creates a copy of the reference of that variable into the stack section in memory. Is uses a reference to get the value. 
+So when the value is changed using the reference 
+it changes the value of the actual variable.
+
+
+
+
+
+
