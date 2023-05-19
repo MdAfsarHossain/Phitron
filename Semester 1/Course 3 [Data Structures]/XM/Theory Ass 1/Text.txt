@@ -1,0 +1,133 @@
+The new operator denotes a request for memory allocation on the Free Store. 
+If sufficient memory is available, a new operator initializes the memory and returns 
+the address of the newly allocated and initialized memory to the pointer variable. 
+pointer-variable = new data-type;
+Here, the pointer variable is the pointer of type data-type. 
+Data type could be any built-in data type including array or any user-defined 
+data type including structure and class. 
+
+Since the programmer has allocated memory at runtime, it’s the responsibility of 
+the programmer to delete that memory when not required. So at any point, when programmers 
+feel a variable that has been dynamically allocated is no anymore required, they can free 
+up the memory that it occupies in the free store or heap with the “delete” operator. 
+It returns the memory to the operating system. This is also known as memory deallocation. 
+Also, memory will be deallocated automatically once the program ends.
+Syntax for delete operator
+delete pointer_variable;
+
+The new operator is used to allocate memory for a variable or any other entity like 
+objects or arrays on a heap memory area. If a sufficient amount of memory is available 
+on the heap, the new operator will initialize the memory and return the address of the 
+newly allocated memory and you can use pointers to store the address of that memory location.
+pointer-variable = new data-type;
+Here, the pointer variable is the pointer of type data-type. 
+Data type could be any built-in data type including array or any user-defined 
+data type including structure and class. 
+
+
+
+
+In a linear search, the elements don't need to be arranged in sorted order.
+The pre-condition for the binary search is that the elements must be arranged in a sorted order.
+
+It is based on the sequential approach.
+It is based on the divide and conquer approach.
+
+It is preferrable for the small-sized data sets.
+It is preferrable for the large-size data sets.
+
+It is less efficient in the case of large-size data sets.
+It is more efficient in the case of large-size data sets.
+
+It can be implemented on both a single and multidimensional array.
+It can be implemented only on a multidimensional array.
+
+It is preferable to use it with small-sized data sets.
+It is used with large sized datasets.
+
+It is less efficient when the size of the array/list is large.
+It is more efficient on large datasets.
+
+It can be implemented on any linear data structure like an array, linked list.
+It can only be used on data structures that have two-way traversal.
+
+The worst-case time complexity is O(n).
+The worst case time complexity is O(log n).
+
+Less Complex to implement.
+More Complex to implement.
+
+Linear search is a slow process.
+Binary search is comparatively faster.
+
+
+
+
+Arrays can be implemented in a static or dynamic way.	
+Vectors can only be implemented dynamically.
+
+Arrays have a fixed size.
+Vectors have a dynamic size. They can resize themselves.
+
+Available in both C and C++.
+Only available in C++
+
+Array is not a class.
+Vector is a class.
+
+In array, no methods are provided for adding and removing elements.
+In vector, methods are provided for adding and removing elements
+
+Array is unsynchronized.
+Vector is synchronized.
+
+Fixed-size memory allocates by the array.
+In vector, memory allocates by the dynamic.
+
+Index-based data structures.
+Vectors are not index-based data structures.
+
+Reallocation of memory in the case of Vectors is done implicitly.
+Reallocation of memory in case of Array is not done implicitly.
+
+In programming, vectors can be copied or assigned directly.
+In programming, arrays can never be copied or assigned directly.
+
+6
+7 2 13 2 11 4
+
+1st iteration:
+1st step: 7 2 13 2 11 4 -> 2 7 13 2 11 4
+2nd step: 2 7 13 2 11 4 ->  2 7 13 2 11 4
+3rd step: 2 7 13 2 11 4 -> 2 7 2 13 11 4
+4th step: 2 7 2 13 11 4 -> 2 7 2 11 13 4
+5th step: 2 7 2 11 13 4 -> 2 7 2 11 4 13
+End of step: 2 7 2 11 4 13
+
+2nd iteration:
+1st step: 2 7 2 11 4 13 -> 2 7 2 11 4 13
+2nd step: 2 7 2 11 4 13 -> 2 2 7 11 4 13 
+3rd step: 2 2 7 11 4 13 -> 2 2 7 11 4 13
+4th step: 2 2 7 11 4 13 -> 2 2 7 4 11 13
+End of step: 2 2 7 4 11 13
+
+3rd iteration:
+1st step: 2 2 7 4 11 13 -> 2 2 7 4 11 13
+2nd step: 2 2 7 4 11 13 -> 2 2 7 4 11 13
+3rd step: 2 2 7 4 11 13 -> 2 2 4 7 11 13
+End of step: 2 2 4 7 11 13
+
+4th iteration:
+1st step: 2 2 4 7 11 13 -> 2 2 4 7 11 13
+2nd step: 2 2 4 7 11 13 -> 2 2 4 7 11 13
+End of step: 2 2 4 7 11 13
+
+5th iteration:
+1st step: 2 2 4 7 11 13 -> 2 2 4 7 11 13
+End of step: 2 2 4 7 11 13
+
+6th iteration:
+Final step: 2 2 4 7 11 13 
+
+
+ 
