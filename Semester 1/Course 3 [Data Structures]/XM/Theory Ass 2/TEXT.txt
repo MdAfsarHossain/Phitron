@@ -1,0 +1,291 @@
+Here's an algorithm to sort a stack of integers using another stack:
+
+1. Create an empty stack called "temp".
+2. While the input stack is not empty, do the following:
+a. Pop an element from the input stack and call it "x".
+b. While temp is not empty and the top element of temp is greater than x, pop the top element of temp and push it back to the input stack.
+c. Push x onto temp.
+3. The temp will now contain the sorted elements of the input stack.
+
+input stack: {3, 4, 6, 2, 5}
+1. Create an empty stack called "temp". => temp: {}
+2. Pop the top element form the input stack and sotre it into x variable. => x = 5, input: {3, 4, 6, 2}
+3. Now temp stack is empty so push x value into temp stack. => temp: {5}
+4. Pop the top element form the input stack and sotre it into x variable. => x = 2, input: {3, 4, 6}
+5. temp top element is greater than x variable. So, push it into input stack and pop from temp stack. =>input: {3, 4, 6, 5}
+   --Now temp stack is empty so push x value into temp stack. => temp: {2}
+6. Pop the top element form the input stack and sotre it into x variable. => x = 5, input: {3, 4, 6}
+7. temp top element is less than x variable. So, push x value into temp stack. =>temp: {2, 5}
+8. Pop the top element form the input stack and sotre it into x variable. => x = 6, input: {3, 4}
+9. temp top element is less than x variable. So, push x value into temp stack. =>temp: {2, 5, 6}
+10. Pop the top element form the input stack and sotre it into x variable. => x = 4, input: {3}
+11. temp top element is greater than x variable. So, push it into input stack and pop from temp stack. => input: {3, 6}, temp: {2, 5}
+   --temp top element is greater than x variable. So, push it into input stack and pop from temp stack. => input: {3, 6, 5}, temp: {2}
+   --temp top element is less then x variable. So, push x value into temp stack. =>temp: {2, 4}, input: {3, 6, 5}
+12. Pop the top element form the input stack and sotre it into x variable. => x = 5, input: {3, 6}
+13. temp top element is less then x variable. So, push x value into temp stack. =>temp: {2, 4, 5}, input: {3, 6}
+14. Pop the top element form the input stack and sotre it into x variable. => x = 6, input: {3}
+15. temp top element is less then x variable. So, push x value into temp stack. =>temp: {2, 4, 5, 6}, input: {3}
+16. Pop the top element form the input stack and sotre it into x variable. => x = 3, input: {}
+17. temp top element is greater than x variable. So, push it into input stack and pop from temp stack. =>input: {6}, temp: {2, 4, 5}
+   --temp top element is greater than x variable. So, push it into input stack and pop from temp stack. =>input: {6, 5}, temp: {2, 4}
+   --temp top element is greater than x variable. So, push it into input stack and pop from temp stack. =>input: {6, 5, 4}, temp: {2}
+   --temp top element is less then x variable. So, push x value into temp stack. =>temp: {2, 3}, input: {6, 5, 4}
+18. Pop the top element form the input stack and sotre it into x variable. => x = 4, input: {6, 5}
+19. temp top element is less then x variable. So, push x value into temp stack. =>temp: {2, 3, 4}, input: {6, 5}
+20. Pop the top element form the input stack and sotre it into x variable. => x = 5, input: {6}
+21. temp top element is less then x variable. So, push x value into temp stack. =>temp: {2, 3, 4, 5}, input: {6}
+22. Pop the top element form the input stack and sotre it into x variable. => x = 6, input: {}
+23. temp top element is less then x variable. So, push x value into temp stack. =>temp: {2, 3, 4, 5, 6}, input: {}
+
+Sorting Stack: {2, 3, 4, 5, 6}
+
+
+[3,4,6,2,5]
+Orginal Stack: [3,4,6,2,5]
+Temp Stack: []
+1. First take orginal stack top element. It's 5 and store it x variable;
+2. Push it into temp stack and pop from orginal stack. temp -> {5}, orginal stack-> {3, 4, 6, 2}
+3. Now take orginal stack top element. It's 2 and store it x variable.
+4. Now compare the x value with the temp stack top element(5). 
+   If x is greater than to temp top element then push it into after temp stack top element and pop into orginal stack.
+   Else, x is less than to temp top element then compare the x value with the temp top element.
+   Pop temp top element until x element is less than temp top element. Before pop temp top element push it into orginal stack.
+
+  
+
+--------------------------------------------
+a+b*c+d*e
+In C++, a template class is a generic class that can work with different data types. Instead of defining a class for a specific data type, you can define a template class that can be instantiated for any data type that meets certain requirements (e.g. a data type must have a specific operator defined).
+
+A template class is defined using the template keyword followed by template parameters enclosed in angle brackets (<>). For example:
+
+A template class in C++ is a powerful feature that allows you to write generic classes that can work with any data type that meets certain requirements. The main advantage of template classes is that they can save you a lot of time and effort by reducing code duplication and increasing code reuse.
+----------------------------------------
+a+b*c+d*e
+Here's the process of converting an infix expression to a postfix expression using a stack:
+
+Step 1: Initialize an empty stack.
+Step 2: Start scanning the infix expression from left to right.
+Step 3: If the current character is an operand, add it to the postfix expression.
+Step 4: If the current character is an operator, pop all the operators from the stack with higher or equal precedence and add them to the postfix expression. Then push the current operator onto the stack.
+Step 5: Repeat steps 3 and 4 until all the characters in the infix expression have been processed.
+Step 6: Pop all the operators from the stack and add them to the postfix expression.
+
+Let's apply these steps to the expression: "a+b*c+d*e"
+
+Step 1: Initialize an empty stack.
+
+Stack: []
+
+Postfix expression: ""
+
+Step 2: Start scanning the infix expression from left to right.
+
+Current character: a
+
+Step 3: If the current character is an operand, add it to the postfix expression.
+
+Stack: []
+
+Postfix expression: "a"
+
+Step 4: If the current character is an operator, pop all the operators from the stack with higher or equal precedence and add them to the postfix expression. Then push the current operator onto the stack.
+
+Current character: +
+
+Stack: []
+
+Postfix expression: "a"
+
+Stack: [ + ]
+
+Postfix expression: "a"
+
+Current character: b
+
+Stack: [ + ]
+
+Postfix expression: "ab"
+
+Current character: *
+
+Stack: [ + ]
+
+Postfix expression: "ab"
+
+Stack: [ +, * ]
+
+Postfix expression: "ab"
+
+Current character: c
+
+Stack: [ +, * ]
+
+Postfix expression: "abc"
+
+Step 4: If the current character is an operator, pop all the operators from the stack with higher or equal precedence and add them to the postfix expression. Then push the current operator onto the stack.
+
+Stack: [ + ]
+
+Postfix expression: "abc*"
+
+Current character: +
+
+Stack: [ + ]
+
+Postfix expression: "abc*"
+
+Stack: [ +, + ]
+
+Postfix expression: "abc*"
+
+Current character: d
+
+Stack: [ +, + ]
+
+Postfix expression: "abc*d"
+
+Current character: *
+
+Stack: [ +, + ]
+
+Postfix expression: "abc*d"
+
+Stack: [ +, +, * ]
+
+Postfix expression: "abc*d"
+
+Current character: e
+
+Stack: [ +, +, * ]
+
+Postfix expression: "abc*de"
+
+Step 5: Repeat steps 3 and 4 until all the characters in the infix expression have been processed.
+
+Step 6: Pop all the operators from the stack and add them to the postfix expression.
+
+Stack: [ +, + ]
+
+Postfix expression: "abc*de*"
+
+Stack: [ + ]
+
+Postfix expression: "abc*de*+"
+
+Stack: []
+
+Postfix expression: "abc*de*++"
+
+The postfix expression is: "abc*de*++"
+-----------------------------------------------
+Create an empty stack, let's call it "temp".
+Repeat these actions until the initial stack (stack1) is completely empty.
+a. Remove the top element from stack 1 and assign it to the variable "x."
+b. Keep going until either stack1 is empty or its top element is less than x.
+
+i. Remove the top stack1 element and place it on the temp.
+d) Place x on stack 1.
+Continue doing thus till temp is empty.
+a. Remove the temp's top element and place it on stack 1.
+
+Here are the steps to sort the stack [3,4,6,2,5]:
+Create an empty stack temp.
+Repeat the following steps:
+a. Pop 3 from stack1 and assign it to x.
+b. Repeat the following steps:
+i. Stack1 is not empty and the top element of stack1, which is 4, is greater than x.
+ii. Pop 4 from stack1 and push it onto temp.
+c. Push x, which is 3, onto stack1. Stack1 now contains [3,4].
+a. Pop 4 from stack1 and assign it to x.
+b. Repeat the following steps:
+i. Stack1 is not empty and the top element of stack1, which is 6, is greater than x.
+ii. Pop 6 from stack1 and push it onto temp.
+c. Push x, which is 4, onto stack1. Stack1 now contains [3,4,6].
+a. Select 6 and give it to x from stack 1.
+b. Carry out the actions below again:
+I. Stack 1 does not include an empty element, and its top element, 2, is greater than x.
+
+ii. Take 2 out of stack 1 and place it on temp. Push the 6th element of x onto stack1. There are now [3,4,6,2] in stack1.
+Push x, which is 6, onto stack1. Stack1 now contains [3,4,6,2].
+a. Pop 2 from stack1 and assign it to x.
+b. Repeat the following steps:
+i. Stack 1 does not include an empty element, and its top element, 5, is greater than x.
+ii. Remove 5 from stack 1 and place it on temp.
+iii. Push the number 2 onto stack1. There are now [3,4,6,2,5] in stack1.
+
+Repeat the following steps:
+a. Pop 5 from stack1 and push it onto temp.
+a. Pop 2 from stack1 and push it onto temp.
+a. Pop 6 from stack1 and push it onto temp.
+a. Pop 4 from stack1 and push it onto temp.
+a. Pop 3 from stack1 and push it onto temp.
+----------------------------------------
+Push the character onto the stack if it is an opening parenthesis, such as "(," "[," or "."
+Pop the top element from the stack and see if it matches the associated opening parenthesis if the current character is a closing parenthesis, such as "")", "]", or "". The parentheses are not balanced if they don't match.
+Repeat the process until the entire expression has been processed.
+If the stack is not empty at the end, then the parentheses are not balanced.
+
+Read "(". Push it onto the stack. The stack currently has [(].
+Read "(". Push it onto the stack. Currently on the stack are [(, (].
+Read "[". Push it onto the stack. Currently on the stack are [(, (, [].
+Read "]". Pop "[" from the stack. The stack now contains [(, (].
+Read "[". Push it onto the stack. Currently on the stack are [(, (, [].
+Read "]". Pop "[" from the stack. The stack now contains [(, (].
+Now that "{" has been read and added to the stack, it contains [(, (, {].
+Push "(" onto the stack, read it, and the stack now contains [(, (, {, (].
+Read ") and remove "(" from the stack, leaving [(, (, {] on the stack.
+Read "}" remove "{" from the stack, [(, (] are now present in the stack.
+Read ")". Pop "(" from the stack. The stack now contains [(].
+Read ")". Pop "(" from the stack. The stack now contains [].
+The stack is empty, which means the parentheses are balanced.
+
+----------------------------------------------------------
+Postfix notation is the notation in which operators are placed after the corresponding operands in the expression.
+In a postfix expression, an operator is written after its operands.
+Postfix expression are needed when we require operators before the operands while postfix notations are needed when we require operators after the operands.
+
+Here are the steps for evaluating the expression "abc*+de*+":
+
+Create an empty stack
+Read "a" and push it onto the stack. The stack now contains [a].
+Read "b" and push it onto the stack. The stack now contains [a, b].
+Read "c" and push it onto the stack. The stack now contains [a, b, c].
+Read "*" and pop "c" and "b" from the stack. Evaluate the expression "b * c". Push the result "bc" onto the stack. The stack now contains [a, bc].
+Read "+" and pop "bc" and "a" from the stack. Evaluate the expression "a + bc". Push the result "abc" onto the stack. The stack now contains [abc].
+Read "d" and push it onto the stack. The stack now contains [abc, d].
+Read "e" and push it onto the stack. The stack now contains [abc, d, e].
+Read "*" and pop "e" and "d" from the stack. Evaluate the expression "d * e". Push the result "de" onto the stack. The stack now contains [abc, de].
+Read "+" and pop "de" and "abc" from the stack. Evaluate the expression "abc + de". Push the result "abcde" onto the stack. The stack now contains [abcde].
+The final result "abcde" is the value at the top of the stack.
+In this way, the postfix expression "abc*+de*+" can be evaluated using a stack to give the final result "abcde".
+
+Push "a" onto the stack after reading it. The stack currently has [a].
+Push "b" onto the stack after reading it. [A, B] are now present on the stack.
+Put "c" on the stack after reading it. [A, B, C] are now present on the stack.
+Pick up "c" and "b" from the stack after reading "*." Analyze the formula "b * c." Place the outcome "bc" on the stack. [A, bc] are now present on the stack.
+Take "bc" and "a" out of the stack after reading "+." Analyze the phrase "a + bc." Place "abc" as the outcome on the stack. [abc] is now present in the stack.
+Push "d" onto the stack after reading it. [abc, d] are now present on the stack.
+Put "e" on the stack after reading it. There are now [abc, d, e] on the stack.
+Take "e" and "d" out of the stack after reading "*." Analyze the formula "d * e." Place "de" as the outcome on the stack. [abc, de] are now present in the stack.
+Take "de" and "abc" out of the stack after reading "+." Analyze the phrase "abc + de." Put "abcde" as the output on the stack. [abcde] is now present in the stack.
+The value at the top of the stack is the final result, "abcde."
+The ultimate result "abcde" can be obtained by evaluating the postfix expression "abc*+de*+" using a stack in this manner.
+
+-----------------------------------------------------------------
+The time complexity of push operation in a stack: O(1).
+The time complexity of pop operation in a stack: O(1).
+The time complexity of top operation in a stack: O(1).
+-----------------------------------------------------------------
+Array-based implementation is a method of implementing a data structure, such as a stack, using an array.
+The components of a stack are kept in a contiguous block of memory in an array-based implementation, where each component is given a distinct index.
+The top of the stack is stored at the highest index of the array, and new elements are added or removed from the top of the stack by modifying the index of the highest element. 
+
+Linked-list based implementation is a method of implementing a data structure, such as a stack, using a linked list.
+Each stack element is represented as a linked list node with a reference to the subsequent node in the stack in a linked-list implementation of a stack. 
+The top of the stack is stored as the head of the linked list, and new elements are added or removed from the top of the stack by modifying the head reference.
+
+This is primarily due to the fact that arrays have constant time access for any index, making it possible to get an element at any point in the stack in O(1) time. Accessing an element at a particular location in a linked-list implementation requires traversing the list from the head, which takes O(n) time.
+
+In general, linked-list based implementations are preferable when dealing with variable-sized data structures that regularly need to be added to or removed from in the middle because those operations can be completed in O(1) time. However, for random access, array-based implementation is more efficient.
