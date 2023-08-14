@@ -1,0 +1,55 @@
+
+The basic idea behind this approach is to color each node of the graph either red or blue, such that no two adjacent nodes have the same color. If it is possible to color all the nodes in the graph using only two colors, then the graph is bipartite; otherwise, it is not.
+
+Here's how the algorithm works:
+
+Choose an arbitrary node in the graph and color it red.
+Color all its neighbors blue.
+Repeat step 2 for all neighbors of the blue nodes, coloring them red. Continue this process until all nodes are colored or a conflict arises where a node has two different colors.
+If at any point during the above process, we encounter a node that has two different colors, then the graph is not bipartite; otherwise, it is bipartite.
+--------------------------------------------------
+A bipartite graph is a graph in which the nodes can be partitioned into two sets such that no two nodes within the same set are adjacent.
+---------------------------------------------
+Recursion is a technique where a function calls itself repeatedly until it reaches a base case, which is a condition that stops the recursion. Each time the function calls itself, it creates a new instance of the function with its own set of parameters and local variables. Recursion can be used to solve problems that can be broken down into smaller subproblems that are similar in nature to the original problem.
+
+Iteration, on the other hand, is a process where a loop is used to repeatedly execute a block of code until a certain condition is met. The loop runs for a fixed number of times or until a specific condition is satisfied. Iteration can be used to solve problems that require repetitive actions, such as iterating over a list of items.
+--------------------------------------------------
+int factorial(int n) {
+    if(n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n-1);
+    }
+}
+
+
+The purpose of a base case in a recursive function is to define the end condition for the recursion. It provides a stopping point for the function and prevents it from infinitely calling itself, which could cause an infinite loop and crash the program.
+
+If a base case is not included in a recursive function, the function will continue to call itself indefinitely, resulting in an infinite loop. This can consume all available memory and CPU resources on the system, causing the program to crash or freeze. Therefore, it is essential to always include a base case in a recursive function to ensure that it terminates correctly.
+--------------------------------------------------
+In contrast to DAGs, which can only express acyclic relationships or dependencies, DCGs can represent cyclic interactions or dependencies between the graph's nodes. This means that DAGs are used to describe processes that have a rigid order or a linear flow, whereas DCGs are frequently employed in instances where cyclic interactions exist, such as when modeling processes with feedback loops.
+
+A DCG contains at least one directed cycle
+A DAG does not contain any directed cycles.
+
+DCG can represent cyclic relationships or dependencies.
+DAG can only represent acyclic relationships or dependencies. 
+
+DCG cannot be topologically sorted
+DAG can be topologically sorted
+
+a directed acyclic graph (DAG) is a directed graph with no directed cycles.
+which means that there is no path that starts and ends at the same vertex.
+This is a DCG because there is a cycle in the graph. For example, we can follow the path A → B → C → D → A, which starts and ends at the same vertex, A.
+A graph data structure called a directed cyclic graph (DAG) is composed of nodes and edges, where the edges are directed and create cycles. Each edge in a directed graph has a corresponding direction, therefore it can only be traversed in that direction. When a path that follows the course of a node's edges leads back to that node, it is said to be in a cycle.
+No, a topological sort cannot be implemented in a Directed cyclic graph (DCG) because a DCG contains one or more cycles. A cycle is a set of nodes where each node can be reached from another node in the same set by following a path through directed edges. In such a case, there is no way to determine a linear ordering of the nodes that satisfies the requirement of a topological sort.
+A cycle is a set of nodes where each node can be reached from another node in the same set by following a path through directed edges. In such a case, there is no way to determine a linear ordering of the nodes that satisfies the requirement of a topological sort.
+A topological sort requires a directed acyclic graph (DAG), which is a directed graph without any cycles. In a DAG, a topological sort can be performed by repeatedly selecting a node with no incoming edges, adding it to the sorted list, and removing all outgoing edges from this node. This process is repeated until all nodes have been added to the sorted list.
+------------------------------------------------
+A topological sort or topological ordering of a directed graph is a linear ordering of its vertices in which u occurs before v in the ordering for every directed edge uv from vertex u to vertex v.
+------------------------------------------------
+The graph should be weighted.
+The weights should be non-negative.
+It is inefficient for large graph
+It does not work well with disconnected graphs
+It cannot handle graphs with cycles:
