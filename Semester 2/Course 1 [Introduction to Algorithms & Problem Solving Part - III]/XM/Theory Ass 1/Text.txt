@@ -1,0 +1,287 @@
+##################################################################
+1 2
+1 3
+2 4
+3 5
+3 6
+
+##################################################################
+6 8
+2 3
+2 1
+2 6
+3 4
+3 6
+1 4
+1 6
+4 5
+
+BFS:2 3 1 6 4 5
+DFS:2 3 4 1 6 5
+##################################################################
+6 5
+1 2
+1 3
+2 4
+3 5
+3 6
+BFS: 1 2 3 4 5 6
+DFS: 1 2 4 3 5 6
+##################################################################
+Depth first Search or Depth first traversal is a recursive algorithm for searching all the vertices of a graph or tree data structure. Traversal means visiting all the nodes of a graph.
+The depth-first search (DFS) algorithm starts with the initial node of graph G and goes deeper until we find the goal node or the node with no children.
+
+##################################################################
+Here is the given graph:
+
+lua
+Copy code
+   1 -- 2 -- 5
+   |         |
+   3 -- 4    6
+We will perform BFS and DFS traversal on this graph starting from node 2 as the source.
+
+BFS Traversal:
+We use a queue to perform BFS traversal.
+
+Start at node 2 and enqueue it.
+makefile
+Copy code
+Queue: 2
+Traversal: 2
+Dequeue node 2 and enqueue its adjacent nodes 1 and 5.
+makefile
+Copy code
+Queue: 1, 5
+Traversal: 2, 1, 5
+Dequeue node 1 and enqueue its adjacent node 3.
+makefile
+Copy code
+Queue: 5, 3
+Traversal: 2, 1, 5, 3
+Dequeue node 5 and enqueue its adjacent node 6.
+makefile
+Copy code
+Queue: 3, 6
+Traversal: 2, 1, 5, 3, 6
+Dequeue node 3 and enqueue its adjacent node 4.
+makefile
+Copy code
+Queue: 6, 4
+Traversal: 2, 1, 5, 3, 6, 4
+Dequeue node 6 and there are no more adjacent nodes to enqueue.
+makefile
+Copy code
+Queue: 4
+Traversal: 2, 1, 5, 3, 6, 4
+Dequeue node 4 and there are no more adjacent nodes to enqueue.
+makefile
+Copy code
+Queue: (empty)
+Traversal: 2, 1, 5, 3, 6, 4
+The BFS traversal order of the graph starting from node 2 as the source is: 2, 1, 5, 3, 6, 4.
+
+DFS Traversal:
+We use a stack to perform DFS traversal.
+
+Start at node 2 and push it onto the stack.
+makefile
+Copy code
+Stack: 2
+Traversal: 2
+Pop node 2 from the stack and push its unvisited adjacent nodes 5 and 1 onto the stack.
+makefile
+Copy code
+Stack: 1, 5
+Traversal: 2, 1, 5
+Pop node 5 from the stack and push its unvisited adjacent node 6 onto the stack.
+makefile
+Copy code
+Stack: 1, 6
+Traversal: 2, 1, 5, 6
+Pop node 6 from the stack and there are no more unvisited adjacent nodes to push.
+makefile
+Copy code
+Stack: 1
+Traversal: 2, 1, 5, 6
+Pop node 1 from the stack and push its unvisited adjacent nodes 3 and 4 onto the stack.
+makefile
+Copy code
+Stack: 4, 3
+Traversal: 2, 1, 5, 6, 3, 4
+Pop node 4 from the stack and there are no more unvisited adjacent nodes to push.
+makefile
+Copy code
+Stack: 3
+Traversal: 2, 1, 5, 6, 3, 4
+Pop node 3 from the stack and there are no more unvisited adjacent nodes to push.
+makefile
+Copy code
+Stack: (empty)
+Traversal: 2, 1, 5, 6, 
+##################################################################
+BFS stands for Breadth First Search. It is also known as level order traversal. The Queue data structure is used for the Breadth First Search traversal.
+
+
+BFS (Breadth-First Search) and DFS (Depth-First Search) are two common algorithms used for traversing and searching trees and graphs.
+
+BFS:
+BFS is a traversal algorithm that visits all the vertices of a graph or tree in breadth-first order, i.e., visiting all the vertices at the same level before moving on to the next level. It starts from a source vertex and visits all the vertices that are reachable from the source vertex.
+
+BFS algorithm uses a queue data structure to store the vertices that are to be visited. It starts with the source vertex and adds its adjacent vertices to the queue. Then, it dequeues the first vertex from the queue and adds its unvisited adjacent vertices to the queue. This process continues until all the vertices are visited.
+
+BFS Traversal of a Graph
+
+Here is an example of BFS traversal of a graph:
+
+Start with the source vertex A.
+Add A to the queue and mark it as visited.
+Dequeue A and add its adjacent vertices B and C to the queue.
+Mark B and C as visited.
+Dequeue B and add its adjacent vertex D to the queue.
+Mark D as visited.
+Dequeue C and add its adjacent vertices E and F to the queue.
+Mark E and F as visited.
+Dequeue the remaining vertices in the queue (D, E, and F) and mark them as visited.
+The final BFS traversal order of the graph is: A -> B -> C -> D -> E -> F.
+
+DFS:
+DFS is a traversal algorithm that visits all the vertices of a graph or tree in depth-first order, i.e., visiting all the vertices along a path from the source vertex to the deepest vertex before backtracking. It starts from a source vertex and visits all the vertices that are reachable from the source vertex.
+
+DFS algorithm uses a stack data structure to store the vertices that are to be visited. It starts with the source vertex and pushes it onto the stack. Then, it pops the top vertex from the stack and adds its unvisited adjacent vertices to the stack. This process continues until all the vertices are visited.
+
+DFS Traversal of a Graph
+
+Here is an example of DFS traversal of a graph:
+
+Start with the source vertex A.
+Push A onto the stack and mark it as visited.
+Pop A from the stack and add its unvisited adjacent vertices B and C to the stack.
+Push B onto the stack and mark it as visited.
+Pop B from the stack and add its unvisited adjacent vertex D to the stack.
+Push D onto the stack and mark it as visited.
+Pop D from the stack (as it has no unvisited adjacent vertices) and backtrack to B.
+Pop B from the stack and backtrack to A.
+Add unvisited adjacent vertex E of A to the stack and mark it as visited.
+Push E onto the stack and mark it as visited.
+Pop E from the stack and backtrack to A.
+Add unvisited adjacent vertex F of A to the stack and mark it as visited.
+Push F onto the stack and mark it as visited.
+Pop F from the stack (as it has no unvisited adjacent vertices) and backtrack to A.
+Pop A from the stack and backtrack to the previous vertex (there are no previous vertices, so the traversal is complete).
+The final DFS traversal order of the graph is: A -> B -> D -> C -> E -> F.
+
+BFS and DFS are useful
+##################################################################
+
+BFS stands for Breadth First Search.
+DFS stands for Depth First Search.
+
+BFS uses a Queue to find the shortest path.
+DFS uses a Stack to find the shortest path.
+
+BFS is slower than DFS.
+DFS is faster than BFS.
+
+BFS builds the tree level by level.
+DFS builds the tree sub-tree by sub-tree.
+
+BFS does not use the backtracking concept.
+DFS uses backtracking to traverse all the unvisited nodes.
+
+BFS requires more memory.
+DFS requires less memory. 
+
+##################################################################
+
+
+#include <iostream>
+using namespace std;
+
+// Function to calculate n to the power m recursively
+int power(int n, int m)
+{
+    if (m == 0) {
+        return 1;
+    }
+    else {
+        return n * power(n, m - 1);
+    }
+}
+
+int main()
+{
+    int n, m;
+    cout << "Enter the value of n: ";
+    cin >> n;
+    cout << "Enter the value of m: ";
+    cin >> m;
+    cout << n << "^" << m << " = " << power(n, m) << endl;
+
+    return 0;
+}
+
+In this program, the power() function takes two arguments n and m and returns n to the power m. The base case is when m is 0, which returns 1. Otherwise, the function recursively calls itself with m-1 as the new value of m, until the base case is reached.
+
+In the main() function, the user is prompted to enter the values of n and m, and the power() function is called with these values. The result is then printed to the console.
+
+##################################################################
+
+Here's the adjacency list for the given adjacency matrix:
+
+0:
+1: 2, 3
+2: 1, 4
+3: 1, 4
+4: 2, 3, 5, 6
+5: 4
+6: 4
+
+And here's the graph representation:
+
+     1 -- 2
+    / \    \
+   3   4 -- 5
+          \
+           6
+Note that in the adjacency list, the vertices are numbered starting from 0. However, in the graph representation, they are numbered starting from 1, which is a common convention.
+To convert the given Adjacency Matrix into an Adjacency List, we can traverse the matrix row by row and add each non-zero value along with its corresponding column index to a list associated with that row index.
+
+Here is the Adjacency List representation of the given matrix:
+
+0: []
+1: [2, 3]
+2: [1, 4]
+3: [1, 4]
+4: [2, 3, 5, 6]
+5: [4]
+6: [4]
+
+And here is the visual representation of the graph:
+   1 -- 2       4 -- 5
+   |    |       |    |
+   3    4       |    |
+                 6    |
+                      |
+                      |
+                      |
+                      |
+                      
+
+Note: In the visual representation, the nodes are numbered from 1 to 6 instead of 0 to 5 as in the matrix representation. Also, the lines connecting the nodes are undirected edges, whereas the matrix represents a directed graph.
+
+
+
+1 2
+1 3
+2 1
+2 4
+3 1
+3 4
+4 2
+4 3
+4 5
+4 6
+5 4
+6 4
+0
