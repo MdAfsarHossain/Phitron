@@ -1,0 +1,6 @@
+https://leetcode.com/problems/fibonacci-number/
+https://www.spoj.com/problems/FARIDA/en/
+https://codeforces.com/contest/456/problem/C
+https://leetcode.com/problems/n-th-tribonacci-number/
+
+
