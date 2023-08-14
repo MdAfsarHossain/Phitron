@@ -1,0 +1,157 @@
+Relax
+
+
+Selected Node |  A B C E F G H I J
+----------------------------------
+      -       | ♾♾♾ 0 ♾♾♾♾♾
+      E       |    20 9
+             |
+             |
+             |
+             |
+             |
+             |
+             |
+             |
+
+A B C E F G H I J
+1 2 3 4 5 6 7 8 9
+
+A B 2
+A C 1
+A I 18
+A J 5
+
+B A 2
+B C 7
+B E 20
+B F 13
+B H 15
+B J 6
+
+C A 1
+C B 7
+C E 9
+
+E B 20
+E C 9
+E G 5
+
+F B 13
+F G 1
+F H 21
+
+G E 5
+G F 1
+
+A B C E F G H I J
+1 2 3 4 5 6 7 8 9
+
+H B 15
+H F 21
+H I 7
+
+I A 18 
+I H 7
+I J 6
+
+J A 5
+J B 6
+J I 6
+
+1 2 2
+1 3 1
+1 8 18
+1 9 5
+
+2 1 2 
+2 3 7
+2 4 20
+2 5 13
+2 7 15
+2 9 6
+
+3 1 1
+3 2 7
+3 4 9
+
+4 2 20
+4 3 9
+4 6 5
+
+5 2 13
+5 6 1
+5 7 21
+
+6 4 5
+6 5 1
+
+7 2 15
+7 5 21
+7 8 7
+
+8 1 18
+8 7 7
+8 9 6
+
+9 1 5
+9 2 6
+9 8 6
+
+
+
+
+
+
+
+
+
+##################################
+In a recursive function, the recursive case is the part of the function that calls itself. It is the part of the function that breaks down the problem into smaller subproblems and solves them recursively until a base case is reached.
+For example, consider the following recursive function to calculate the factorial of a number:
+int factorial(int n) {
+  if (n == 0) { // base case
+    return 1;
+  } else { // recursive case
+    return n * factorial(n - 1);
+  }
+}
+
+In general, recursive functions consist of two parts: the base case and the recursive case.
+In this function, the base case is when n is equal to 0, and the function returns 1. The recursive case is when n is greater than 0, and the function calls itself with n - 1 as the argument. The function breaks down the problem of calculating the factorial of n into the smaller subproblem of calculating the factorial of n - 1, and solves it recursively until the base case is reached.
+
+The base case is the condition that stops the recursion and is solved without further recursion. It is the simplest case for which the solution is known or trivial[1][4]. The base case is necessary to prevent the function from infinitely calling itself, which would result in a stack overflow error.
+
+It is important to ensure that the recursive case eventually reaches the base case, otherwise the function will continue to call itself indefinitely, resulting in an infinite loop and a stack overflow error.
+##########################################
+An edge list is a list of all edges in the graph. Each edge is represented as a tuple (u, v, w), where u and v are the vertices at the endpoints of the edge and w is the weight of the edge.
+
+
+Graphs can be represented using one dimensional array also. This is called the edge list. In this representation there are five edges are present, for each edge the first element is the source and the second one is the destination. For undirected graph representation the number of elements in the edge list will be doubled.
+In adjacency list representation of a graph, every vertex is represented as a node object. The node may either contain data or a reference to a linked list. This linked list provides a list of all nodes that are adjacent to the current node. Consider a graph containing an edge connecting node A and node B. Then, the node A will be available in node B’s linked list.
+
+An adjacency matrix can be thought of as a table with rows and columns. The row labels and column labels represent the nodes of a graph. An adjacency matrix is a square matrix where the number of rows, columns and nodes are the same. Each cell of the matrix represents an edge or the relationship between two given nodes. For example, adjacency matrix Aij represents the number of links from i to j, given two nodes i and j. 
+##########################################
+Advantages of Breadth First Search:
+Used to find the shortest path between vertices
+Always finds optimal solutions.
+There is nothing like useless path in BFS,since it searches level by level.
+Finds the closest goal in less time
+
+Advantages of Depth First Search:
+Consumes less memory
+Finds the larger distant element(from source vertex) in less time.
+The memory requirement is Linear WRT Nodes.
+Less time and space complexity rather than BFS.
+The solution can be found out without much more search.
+If solution is far away then it consumes time.
+
+1. Memory Constraints As it stores all the nodes of the present level to go for the next level.
+2. If a solution is far away then it consumes time.
+It can be very memory intensive since it needs to keep track of all the nodes in the search tree.
+It can be slow since it expands all the nodes at each level before moving on to the next level.
+It can sometimes find sub-optimal solutions since it doesn’t explore all possible paths through the search tree.
+
+1. Not Guaranteed that it will give you a solution.
+2. Cut-off depth is smaller so time complexity is more.
+3. Determination of depth until the search has proceeded.
