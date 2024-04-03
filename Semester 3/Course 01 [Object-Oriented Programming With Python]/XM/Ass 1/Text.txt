@@ -1,0 +1,33 @@
+
+
+*args allows us to pass a variable number of non-keyword arguments to a Python function. In the function, use an asterisk (*) before the parameter name to pass a variable number of arguments.
+
+def add(*num):
+	sum = 0
+	for x in num:
+		sum = sum + x
+	print("Sum: ", sum)
+
+add(3, 5)
+add(3, 5, 3)
+
+def print_info(**text):
+	for key, value in text.items:
+		print(f"{key}: {value}")
+
+**kwargs allows us to pass a variable number of keyword arguments to a Python function. In the function, use the double-asterisk (**) before the parameter name to denote this type of argument.
+-------------------------------------------------------------------------
+List is a collection of index values pairs as that of array in Python.
+Dictionary is a hashed structure of key and value pairs.
+
+List is created by placing elements in [ ] separated by commas “, “
+Dictionary is created by placing elements in { } as “key”:”value”, each key value pair is separated by commas “, “
+
+The indices of list are integers starting from 0.
+The keys of dictionary can be of any data type.
+
+The elements are accessed via indices.
+The elements are accessed via key-values.
+
+The order of the elements entered are maintained.
+There is no guarantee for maintaining order.
