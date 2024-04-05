@@ -1,0 +1,32 @@
+✔1
+✔2
+✔3
+✔4
+❌5
+✔6
+✔7
+
+-------------------------------
+
+
+def firstName():
+    print("My First name is Md. Afsar")
+    def lastName():
+        print("My Last name is Hossain")
+    return lastName
+
+firstName()()
+
+
+The firstName function prints the string "My First name is Md. Afsar". It also defines an inner function called lastName. The lastName function prints the string "My Last name is Hossain". The firstName function returns the lastName function.
+
+The firstName() function is called immediately, without any arguments. This causes the firstName function to print the string "My First name is Md. Afsar". It also causes the lastName function to be defined. However, the lastName function is not called yet.
+
+The () at the end of the firstName() call invokes the lastName function. This causes the lastName function to print the string "My Last name is Hossain".
+
+
+
+
+
+
+
