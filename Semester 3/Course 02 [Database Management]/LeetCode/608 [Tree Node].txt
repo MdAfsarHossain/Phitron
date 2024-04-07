@@ -1,0 +1,12 @@
+https://leetcode.com/problems/tree-node/
+
+# Write your MySQL query statement below
+
+SELECT id,
+    CASE
+        WHEN p_id IS NULL then "Root"
+        WHEN id IN (SELECT p_id FROM Tree) then "Inner"
+        else "Leaf"
+    END
+    as type
+FROM Tree;
