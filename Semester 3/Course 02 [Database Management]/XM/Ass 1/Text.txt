@@ -1,0 +1,42 @@
+
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+It is a language used for managing data in relational databases.
+It is an RDBMS used for modifying and structuring data in the database.
+
+It is a programming language.
+It is a relational database management system. 
+
+Developed by Microsoft.
+Developed by MySQL and is now owned by Oracle Corp.
+
+A database is a collection of data organized in a way that makes it easy to access and use.
+MySQL is a relational database management system (RDBMS) that runs as a server.
+
+
+Database strengths are flexibility, scalability and performance.	
+MySQL strengths are speed, performance and reliability
+
+Database weaknesses are complexity and security.
+MySQL weakness is licensing costs.
+
+
+It is designed to efficiently manage, store, and retrieve data. 
+Databases can be of various types, such as relational databases, object-oriented databases, or NoSQL databases. 
+Databases provide a framework for storing and managing data, and they can be implemented using different database management systems (DBMS) like MySQL, Oracle, SQL Server, PostgreSQL, etc.
+
+
+
+MySQL is known for its speed, reliability, and ease of use. 
+It provides a comprehensive set of tools and features for creating, managing, and securing databases. 
+MySQL is widely used in web applications and is often the default choice for many developers due to its simplicity and compatibility with various operating systems.
+
+
+------------------------------------------------------------------------------
