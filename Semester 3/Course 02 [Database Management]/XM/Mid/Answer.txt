@@ -1,0 +1,71 @@
+
+--------10 NO---------
+https://app.diagrams.net/?src=about#G1UgpghFsGBPaJqO39F-g-QWTSoelypL9N
+-----------------------
+--------9 NO----------
+SELECT COUNT(*) as total_employees, SUM(salary) as salary
+FROM employees;
+----------------------
+--------8 NO----------
+SELECT *
+FROM employees
+ORDER BY salary ASC
+LIMIT 6 OFFSET 4;
+----------------------
+--------7 NO----------
+SELECT job_id, AVG(salary) as average_salary, MAX(salary) as max_salary
+FROM employees
+GROUP BY job_id;
+----------------------
+--------6 NO----------
+SElECT first_name,  salary
+FROM employees
+WHERE salary > (SELECT AVG(salary) FROM employees);
+----------------------
+--------5 NO----------
+SELECT first_name, last_name
+FROM employees
+WHERE salary > 2000;
+----------------------
+--------4 NO----------
+SELECT first_name, salary
+FROM employees
+WHERE last_name="king";
+
+----------------------
+--------3 NO----------
+USE hr;
+
+SELECT * 
+FROM employees;
+----------------------
+--------2 NO----------
+CREATE TABLE employees(
+    employee_id INT PRIMARY KEY,
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL,
+    email VARCHAR(50) NOT NULL UNIQUE,
+    phone_number CHAR(11) NOT NULL,
+    hire_date DATE DEFAULT(CURRENT_DATE()),
+    job_id INT,
+    salary DECIMAL(10,2) NOT NULL
+);
+----------------------
+--------1 NO----------
+CREATE DATABASE mid_xm;
+
+USE mid_xm;
+
+CREATE TABLE employees(
+    employee_id INT,
+    first_name VARCHAR(30),
+    last_name VARCHAR(30),
+    email VARCHAR(50),
+    phone_number CHAR(11),
+    hire_date DATE,
+    job_id INT,
+    salary DECIMAL(10,2)
+);
+----------------------
+
+
