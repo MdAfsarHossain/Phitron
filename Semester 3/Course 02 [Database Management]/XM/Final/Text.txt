@@ -1,0 +1,34 @@
+Redundancy: 
+Redundancy is the duplication of data in a database. 
+
+Wasted space: 
+When data is duplicated, it takes up more space in the database. This can lead to performance problems, as the database has to search through more data to find the information that it needs.
+
+Data Duplication: 
+Redundancy can lead to data duplication, where the same data is stored in multiple locations, resulting in wasted storage space and increased maintenance complexity. This can also lead to confusion and errors, as different copies of the data may have different values or be out of sync.
+
+Inconsistency:
+If the data is not updated in all of the places where it is duplicated, then the database can become inconsistent. This means that the data in the database may not be accurate.
+
+Data integrity problems: 
+Redundancy can also lead to data integrity problems. This means that the data in the database may not be consistent with itself.
+
+
+Incompleteness:
+Incompleteness is the lack of data in a database.
+
+Inaccurate results: 
+If the data is incomplete, then the results of queries may be inaccurate.
+
+Lack of information:
+If the data is incomplete, then users may not be able to get the information that they need.
+
+Performance problems:
+If the data is incomplete, then the database may not be able to perform queries as efficiently.
+
+Data Integrity Issues: 
+Incomplete database architecture may lead to issues with data integrity. If vital data is either absent or incomplete, it becomes impossible to guarantee the accuracy and reliability of the information contained in the database. Incompleteness can result in inaccurate analysis, reporting, and decision-making based on unreliable or suspect facts.
+
+
+
+
